@@ -1,4 +1,4 @@
-export function drawGift(size, symbol) {
+function drawGift(size, symbol) {
 
     if (size === 1) return '#\n'
   
@@ -36,5 +36,36 @@ export function drawGift(size, symbol) {
     gift += lowerBorder + '\n'
   
     return gift
-  
   }
+
+console.log(drawGift(4, '+'))
+// '   ####\n  #++##\n #++#+#\n####++#\n#++#+#\n#++##\n####\n'
+//   ####
+//   #++##
+//  #++#+#
+// ####++#
+// #++#+#
+// #++##
+// ####
+
+console.log(drawGift(5, '*'))
+// '    #####\n   #***##\n  #***#*#\n #***#**#\n#####***#\n#***#**#\n#***#*#\n#***##\n#####\n'
+//   #####
+//   #***##
+//  #***#*#
+// #***#**#
+// #####***#
+// #***#**#
+// #***#*#
+// #***##
+// #####
+  
+console.log(drawGift(1, '^'))
+// '#\n'
+// #
+
+console.log(drawGift(2, '&'))
+// ' ##\n###\n##\n'
+//  ##
+// ###
+// ##
