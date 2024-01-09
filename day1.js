@@ -1,4 +1,4 @@
-export function findFirstRepeated(gifts) {
+function findFirstRepeated(gifts) {
     const repeatedGiftts = new Set()
   
     for(let i = 0; i < gifts.length; i++) {
@@ -12,3 +12,10 @@ export function findFirstRepeated(gifts) {
     }  
     return -1
   }
+
+console.log(findFirstRepeated([2, 1, 3, 5, 3, 2])) // 3
+console.log(findFirstRepeated([1, 2, 3, 4])) // -1
+console.log(findFirstRepeated([5, 1, 5, 1])) // 5
+console.log(findFirstRepeated([1, 2])) // -1
+console.log(findFirstRepeated([1])) // -1
+console.log(findFirstRepeated([])) // -1
