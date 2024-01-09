@@ -16,3 +16,8 @@ function findNaughtyStep(original, modified) {
     ? originalArray[minLength]
     : modifiedArray[minLength] || ''
   }
+
+console.log(findNaughtyStep('abcd', 'abcde')) // e
+console.log(findNaughtyStep('stepfor', 'stepor')) // f
+console.log(findNaughtyStep('igual', 'igual')) // ''
+console.log(findNaughtyStep('xxxx', 'xxoxx')) // o
