@@ -1,4 +1,4 @@
-export function decode(message) {
+function decode(message) {
     const countOpenAndCloseParenthesis = message.match(/\(|\)/g)
     let parenthesisCounter =
       countOpenAndCloseParenthesis !== null
@@ -30,3 +30,13 @@ export function decode(message) {
   
     return message
   }
+
+  const msg1 = 'hola (odnum)'
+  const msg2 = '(olleh) (dlrow)!'
+  const msg3 = 'sa(u(cla)atn)s'
+  const msg4 = 'sin paréntesis'
+
+  console.log(decode(msg1)) // 'hola mundo'
+  console.log(decode(msg2)) // 'hello world!'
+  console.log(decode(msg3)) // 'santaclaus'
+  console.log(decode(msg4)) // 'sin paréntesis'
