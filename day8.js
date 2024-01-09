@@ -1,4 +1,4 @@
-export function organizeGifts(gifts) {
+function organizeGifts(gifts) {
     const giftsArr = gifts.match(/\d+[a-z]/g)
     let result = ''
   
@@ -19,3 +19,9 @@ export function organizeGifts(gifts) {
     
     return result
   }
+
+console.log(organizeGifts('76a11b')) // '[a]{a}{a}(aaaaaa){b}(b)'
+console.log(organizeGifts('20a')) // '{a}{a}'
+console.log(organizeGifts('70b120a4c')) // '[b]{b}{b}[a][a]{a}{a}(cccc)'
+console.log(organizeGifts('9c')) // '(ccccccccc)'
+console.log(organizeGifts('19d51e')) // '{d}(ddddddddd)[e](e)'
