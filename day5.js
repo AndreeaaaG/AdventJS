@@ -1,4 +1,4 @@
-export function cyberReindeer(road, time) {
+function cyberReindeer(road, time) {
     const roadStates = [road]
     let sledPosition = road.indexOf("S")
     let replacedChar = "."
@@ -27,3 +27,25 @@ export function cyberReindeer(road, time) {
     
     return roadStates
   }
+
+  console.log( cyberReindeer('S.|.', 4) )
+  // [
+  //   "S.|.",
+  //   ".S|.",
+  //   ".S|.",
+  //   ".S|."
+  // ]
+
+  console.log( cyberReindeer('S..|...|..', 10) )
+  // [
+  //   "S..|...|..",
+  //   ".S.|...|..",
+  //   "..S|...|..",
+  //   "..S|...|..",
+  //   "..S|...|..",
+  //   "...S...*..",
+  //   "...*S..*..",
+  //   "...*.S.*..",
+  //   "...*..S*..",
+  //   "...*...S.."
+  // ]
