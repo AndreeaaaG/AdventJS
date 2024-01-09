@@ -20,3 +20,7 @@ function createChristmasTree(ornaments, height) {
     tree += ' '.repeat(height - 1) + '|\n'
     return tree
   }
+
+console.log(createChristmasTree("x", 3))
+console.log(createChristmasTree("xo", 4))
+console.log(createChristmasTree("123", 5))
